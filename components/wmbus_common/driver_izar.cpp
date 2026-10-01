@@ -74,6 +74,8 @@ namespace
         di.addDetection(MANUFACTURER_DME,  0x07,  0x78);
         di.addDetection(MANUFACTURER_DME,  0x06,  0x78);
         di.addDetection(MANUFACTURER_HYD,  0x07,  0x86);
+        di.addDetection(MANUFACTURER_DME,  0xa2,  0x31);
+        di.addDetection(MANUFACTURER_SAP,  0xa2,  0x31);
         di.usesProcessContent();
 
         di.setConstructor([](MeterInfo& mi, DriverInfo& di){ return std::shared_ptr<Meter>(new Driver(mi, di)); });
